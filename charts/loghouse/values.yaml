@@ -35,11 +35,11 @@ storage:
   # You can use some storageClass or hostpath for clickhouse data storage
   # hostpath: /data
   # OR:
-  # pvc:
-  #   name: clickhouse
-  #   accessMode: ReadWriteOnce
-  #   size: 20Gi
-  #   storageClassName: slow
+  pvc:
+    name: clickhouse
+    accessMode: ReadWriteOnce
+    size: 20Gi
+    storageClassName: slow
 
 # Custom partitioning, using LOGS_TABLES_PARTITION_PERIOD variable, in hours.
 # 24 must be divisible by this value for now, so tables always can start with 00 hours (it's skipped for 24). Default is 24, as it was.
